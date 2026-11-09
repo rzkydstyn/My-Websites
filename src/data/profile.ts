@@ -1,7 +1,7 @@
 // src/data/profile.ts
 export const profileData = {
-  name: "[Placeholder: Nama Lengkap Anda]",
-  initials: "MRD",
+  name: "Muhammad Rizky Destyanto",
+  initials: "rzkydstyn",
   statusBadge: "Available for Internship & Technical Collaboration",
   headline:
     "Multidisciplinary Informatics Engineer specializing in Data Science, Application Security, and Full-Stack Development.",
@@ -47,9 +47,9 @@ export const profileData = {
     },
   ],
   contacts: {
-    email: "placeholder.email@domain.com",
-    github: "https://github.com/username-placeholder",
-    linkedin: "https://linkedin.com/in/username-placeholder",
+    email: "rizkydestyanto@gmail.com",
+    github: "https://github.com/rzkydstyn",
+    linkedin: "www.linkedin.com/in/mrizkydestyanto",
     location: "Indonesia",
     resumeUrl: "/resume/placeholder-cv.pdf",
   },
