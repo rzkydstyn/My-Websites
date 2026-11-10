@@ -4,68 +4,88 @@ import { SkillGroup } from "@/types/portfolio";
 export const skillsData: SkillGroup[] = [
   {
     id: "data-science",
-    title: "Data Analytics & Data Science",
-    subtitle: "Option A1 — Core Analytics & Business Intelligence",
+    title: "Data Science & Analytics",
+    subtitle: "Data Analysis, Preprocessing & Machine Learning",
     description:
-      "Mengekstrak, membersihkan, dan memvisualisasikan data menjadi wawasan bisnis yang terukur.",
+      "Mengolah dataset mentah melalui proses data cleaning, exploratory data analysis (EDA), feature engineering, hingga visualisasi dan pemodelan prediktif.",
     subcategories: [
       {
-        name: "Languages & Query",
-        skills: ["Python", "SQL (PostgreSQL / MySQL)"],
+        name: "Programming & Query",
+        skills: ["Python (Intermediate)", "SQL", "PostgreSQL", "MySQL"],
       },
       {
-        name: "Data Manipulation & EDA",
-        skills: ["Pandas", "NumPy", "SciPy", "Data Cleaning", "Exploratory Data Analysis"],
+        name: "Data Processing & ML",
+        skills: [
+          "Pandas (Intermediate)",
+          "Data Cleaning (Intermediate)",
+          "Exploratory Data Analysis (Intermediate)",
+          "NumPy",
+          "Feature Engineering",
+          "Scikit-learn",
+        ],
       },
       {
-        name: "Visualization & BI",
-        skills: ["Matplotlib", "Seaborn", "Power BI", "Tableau", "Looker Studio"],
-      },
-      {
-        name: "Workflow & Environment",
-        skills: ["Jupyter Notebook", "Google Colab", "Excel / Spreadsheets", "Machine Learning Fundamentals"],
+        name: "Visualization & Reporting",
+        skills: ["Matplotlib", "Seaborn", "Statistical Analysis", "Analytical Insights"],
       },
     ],
   },
   {
     id: "cybersecurity",
-    title: "Cybersecurity",
-    subtitle: "Option B2 — Security Analysis & Defensive Operations",
+    title: "Cybersecurity & System Architecture",
+    subtitle: "Security Fundamentals, Networks & Cloud Interest",
     description:
-      "Mengidentifikasi risiko, menganalisis log & lalu lintas jaringan, serta menerapkan mitigasi keamanan sistem.",
+      "Menganalisis keamanan aplikasi web, memahami organisasi sistem komputer, serta menerapkan prinsip pertahanan siber dan validasi input.",
     subcategories: [
       {
-        name: "Core Security Concepts",
-        skills: ["Vulnerability Assessment", "Threat Modeling", "Risk Analysis", "Log Analysis", "OWASP Top 10"],
+        name: "Security & Coursework Foundations",
+        skills: [
+          "Cyber Security Fundamentals",
+          "Web Security Testing",
+          "Vulnerability Assessment",
+          "OWASP Top 10 Awareness",
+        ],
       },
       {
-        name: "System & Network Defense",
-        skills: ["Networking Fundamentals (TCP/IP, DNS)", "Linux Administration", "Firewall & Access Control", "Wireshark", "Burp Suite"],
+        name: "Systems & Infrastructure",
+        skills: [
+          "Computer Organization & Architecture",
+          "Digital Systems",
+          "Linux & CLI Environment",
+          "Cloud Computing Concepts",
+        ],
       },
       {
-        name: "Remediation & Hardening",
-        skills: ["Secure Coding Practices", "Input Validation", "Patch Management", "Web Security Testing"],
+        name: "AI-Assisted Productivity & Analysis",
+        skills: ["Google Gemini (Advanced)", "ChatGPT (Advanced)", "Claude", "Perplexity"],
       },
     ],
   },
   {
     id: "web-dev",
     title: "Web & Software Development",
-    subtitle: "Option C1 — Modern JavaScript / TypeScript Stack",
+    subtitle: "Full-Stack Concepts, Databases & Modern Web Tech",
     description:
-      "Merancang dan membangun aplikasi web full-stack yang responsif, modular, dan mudah dikembangkan.",
+      "Merancang antarmuka web responsif, mengelola basis data relasional, dan berkolaborasi menggunakan kontrol versi Git & GitHub.",
     subcategories: [
       {
-        name: "Front-End Engineering",
-        skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React", "Next.js", "Tailwind CSS"],
+        name: "Front-End & Languages",
+        skills: [
+          "HTML5 & CSS3 (Advanced)",
+          "JavaScript",
+          "TypeScript",
+          "React & Next.js",
+          "Tailwind CSS",
+          "Java (Basic)",
+        ],
       },
       {
-        name: "Back-End & API",
-        skills: ["Node.js", "Next.js API Routes", "RESTful API", "Python / Java Fundamentals"],
+        name: "Database & Low-Code Platforms",
+        skills: ["PostgreSQL", "MySQL", "Oracle APEX", "Database Systems Design"],
       },
       {
-        name: "Database & Deployment",
-        skills: ["PostgreSQL", "MySQL", "Prisma / Drizzle ORM", "Git & GitHub", "Vercel"],
+        name: "Tools, UI/UX & Version Control",
+        skills: ["Git & GitHub (Advanced)", "VS Code (Intermediate)", "Figma (UI/UX)"],
       },
     ],
   },

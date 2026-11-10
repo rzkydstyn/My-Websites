@@ -24,12 +24,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="id" suppressHydrationWarning>
       <body
-        className={`${sansFont.variable} ${monoFont.variable} min-h-screen bg-[#FAFAFA] font-sans text-slate-900 antialiased dark:bg-[#09090B] dark:text-slate-50`}
+        className={`${sansFont.variable} ${monoFont.variable} min-h-screen bg-slate-50 font-sans text-slate-900 antialiased dark:bg-zinc-950 dark:text-slate-50`}
       >
         <layoutUi.ThemeWrapper>
-          <div className="flex min-h-screen flex-col">
+          <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900 transition-colors duration-200 dark:bg-zinc-950 dark:text-slate-50">
             <layoutUi.TopNavbar />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 bg-slate-50 dark:bg-zinc-950">{children}</main>
             <layoutUi.Footer />
           </div>
         </layoutUi.ThemeWrapper>

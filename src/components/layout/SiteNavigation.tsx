@@ -27,17 +27,17 @@ export function TopNavigationBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-md dark:border-zinc-800/80 dark:bg-zinc-950/80">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md transition-colors dark:border-zinc-800 dark:bg-zinc-950/90">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        {/* Identitas Brand / Inisial */}
+        {/* Identitas Brand / Inisial dengan warna tegas di Light & Dark Mode */}
         <navUi.Link
           href="/"
-          className="flex items-center gap-2.5 font-mono text-sm font-bold tracking-tight"
+          className="flex items-center gap-2.5 font-mono text-sm font-bold tracking-tight text-slate-900 dark:text-slate-100"
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-md bg-slate-900 text-white dark:bg-slate-100 dark:text-zinc-900">
             <icons.Terminal className="h-4 w-4" />
           </span>
-          <span>{profileData.initials}.DEV</span>
+          <span>rzkydstyn.DEV</span>
         </navUi.Link>
 
         {/* Menu Desktop */}
@@ -52,7 +52,7 @@ export function TopNavigationBar() {
                 className={cn(
                   "text-sm font-medium transition-colors",
                   isActive
-                    ? "text-blue-600 dark:text-blue-400"
+                    ? "font-semibold text-blue-600 dark:text-blue-400"
                     : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
                 )}
               >
@@ -83,7 +83,7 @@ export function TopNavigationBar() {
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Buka menu navigasi"
-            className="rounded-md border border-slate-200 p-2 dark:border-zinc-800"
+            className="rounded-md border border-slate-200 p-2 text-slate-700 dark:border-zinc-800 dark:text-slate-200"
           >
             {mobileOpen ? <icons.X className="h-5 w-5" /> : <icons.Menu className="h-5 w-5" />}
           </button>
@@ -120,7 +120,7 @@ export function TopNavigationBar() {
 
 export function BottomFooter() {
   return (
-    <footer className="border-t border-slate-200 bg-white py-10 dark:border-zinc-800 dark:bg-zinc-950">
+    <footer className="border-t border-slate-200 bg-white py-10 transition-colors dark:border-zinc-800 dark:bg-zinc-950">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 sm:flex-row">
         <div>
           <p className="font-mono text-xs font-semibold text-slate-900 dark:text-slate-100">
@@ -135,7 +135,7 @@ export function BottomFooter() {
             href={profileData.contacts.github}
             target="_blank"
             rel="noreferrer"
-            className="hover:underline"
+            className="hover:text-slate-900 hover:underline dark:hover:text-white"
           >
             GitHub
           </a>
@@ -143,11 +143,14 @@ export function BottomFooter() {
             href={profileData.contacts.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="hover:underline"
+            className="hover:text-slate-900 hover:underline dark:hover:text-white"
           >
             LinkedIn
           </a>
-          <a href={`mailto:${profileData.contacts.email}`} className="hover:underline">
+          <a
+            href={`mailto:${profileData.contacts.email}`}
+            className="hover:text-slate-900 hover:underline dark:hover:text-white"
+          >
             Email
           </a>
         </div>

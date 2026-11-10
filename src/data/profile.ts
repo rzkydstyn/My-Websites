@@ -2,55 +2,61 @@
 export const profileData = {
   name: "Muhammad Rizky Destyanto",
   initials: "rzkydstyn",
-  statusBadge: "Available for Internship & Technical Collaboration",
+  statusBadge: "Informatics Student — Open for Internship & Tech Collaboration",
   headline:
-    "Multidisciplinary Informatics Engineer specializing in Data Science, Application Security, and Full-Stack Development.",
+    "Informatics Student | Aspiring Cloud & Security Engineer | Data & Software Dev Enthusiast | Active Student Leader.",
   shortIntro:
-    "Mahasiswa Teknik Informatika yang berfokus pada rekayasa perangkat lunak berbasis data (Data-Driven Software) dan analisis pertahanan sistem (Defensive Security). Mengintegrasikan analitik bisnis, pengamanan infrastruktur, dan arsitektur web modern untuk membangun solusi teknologi yang utuh.",
+    "Mahasiswa Semester 5 Teknik Informatika di UIN Syarif Hidayatullah Jakarta dengan minat kuat pada Data Science & Engineering, Cybersecurity, dan Software Development. Aktif memimpin berbagai inisiatif strategis dan kolaborasi organisasi di HIMTI UIN Jakarta.",
   aboutNarrative: [
-    "Sebagai mahasiswa S1 Teknik Informatika, saya memandang sebuah sistem perangkat lunak tidak hanya dari sisi fungsionalitas antarmuka, tetapi juga dari bagaimana data di dalamnya diolah menjadi keputusan strategis serta bagaimana arsitekturnya dilindungi dari potensi ancaman siber.",
-    "Pendekatan multidisipliner ini memungkinkan saya untuk menjembatani komunikasi teknis antara tim Data Analytics, Security Operations, dan Software Engineering dalam siklus pengembangan produk nyata.",
+    "Saya adalah mahasiswa semester 5 Teknik Informatika di UIN Syarif Hidayatullah Jakarta dengan ketertarikan mendalam pada Data Science & Analytics, Artificial Intelligence/Machine Learning, Cybersecurity, Cloud Computing, dan Web Development. Saya antusias membangun solusi teknologi praktis melalui pengolahan data terstruktur, pengembangan perangkat lunak modern, dan eksplorasi keamanan sistem.",
+    "Sejalan dengan perjalanan teknis saya, saya aktif sebagai pemimpin mahasiswa di Himpunan Mahasiswa Teknik Informatika (HIMTI) UIN Jakarta. Saat ini saya menjabat sebagai Kepala Departemen Eksternal, serta pernah dipercaya sebagai Ketua Pelaksana HIMPED X MELATI 26 dan koordinator lintas divisi pada berbagai program pengembangan teknologi kampus.",
+    "Saat ini saya secara aktif mencari peluang Internship, kolaborasi proyek teknologi, maupun mentorship di bidang Data Analytics, Data Science, Cybersecurity, atau Software Engineering.",
   ],
   education: {
-    university: "[Placeholder: Nama Universitas — Misal: UIN Syarif Hidayatullah Jakarta]",
-    degree: "Bachelor of Computer Science / Informatics Engineering (S1 Teknik Informatika)",
-    period: "[Placeholder: Tahun Masuk — Sekarang]",
-    gpa: "[Placeholder: IPK / Fokus Akademik]",
+    university: "UIN Syarif Hidayatullah Jakarta",
+    degree: "Bachelor of Informatics Engineering (S1 Teknik Informatika — Semester 5)",
+    period: "2024 — Present",
+    gpa: "Active Undergraduate (Previous: SMAN 1 Bojonggede, Science 2021–2024)",
     relevantCoursework: [
-      "Data Science & Analytics",
-      "Network & System Security",
-      "Software Engineering",
-      "Database Management Systems",
-      "Research Methodology",
+      "Data Structures & Algorithms",
+      "Database Systems",
+      "Data Analysis / Statistics",
+      "Web Development",
+      "Cyber Security",
+      "Discrete Mathematics",
+      "Calculus",
+      "Digital Systems",
+      "Computer Organization & Architecture",
     ],
   },
   careerInterests: [
-    "Data Analyst / Business Intelligence Intern",
-    "Security Operations (SOC) / Vulnerability Analyst Intern",
-    "Full-Stack / Front-End Web Developer Intern",
+    "Data Analyst / Data Science Intern",
+    "Software / Full-Stack Engineering Intern",
+    "Cybersecurity / Cloud & System Analyst Intern",
   ],
   journeyTimeline: [
     {
-      phase: "Phase 01 — Software & Database Foundations",
+      phase: "Phase 01 — Programming & Database Foundations",
       description:
-        "Mempelajari logika pemrograman dasar, struktur data, perancangan basis data relasional (SQL), dan pengembangan aplikasi web modern.",
+        "Membangun fondasi algoritma, struktur data, pemrograman Python, Java, dan pengembangan antarmuka web (HTML, CSS, JavaScript) serta manajemen basis data relasional (PostgreSQL, MySQL, Oracle APEX).",
     },
     {
-      phase: "Phase 02 — Defensive Security & System Analysis",
+      phase: "Phase 02 — Data Science, EDA & Machine Learning",
       description:
-        "Mendalami cara kerja jaringan komputer, administrasi Linux, analisis lalu lintas paket, asesmen kerentanan sistem, dan praktik secure coding.",
+        "Mengembangkan proyek analisis data nyata menggunakan Pandas, NumPy, Matplotlib, Seaborn, dan Scikit-learn untuk ekstraksi insight serta pemodelan prediktif.",
     },
     {
-      phase: "Phase 03 — Data Analytics & Business Intelligence",
+      phase: "Phase 03 — Organizational Leadership & Multidisciplinary Integration",
       description:
-        "Mengolah dataset kompleks menggunakan Python dan SQL, melakukan Exploratory Data Analysis (EDA), serta menyusun visualisasi interaktif untuk mendukung pengambilan keputusan.",
+        "Memimpin Departemen Eksternal HIMTI UIN Jakarta sembari memperluas kompetensi di bidang Cybersecurity, Cloud Computing, dan arsitektur web modern berbasis Next.js & TypeScript.",
     },
   ],
   contacts: {
     email: "rizkydestyanto@gmail.com",
+    phone: "+6281991303698",
     github: "https://github.com/rzkydstyn",
-    linkedin: "www.linkedin.com/in/mrizkydestyanto",
-    location: "Indonesia",
-    resumeUrl: "/resume/placeholder-cv.pdf",
+    linkedin: "https://linkedin.com/in/mrizkydestyanto",
+    location: "Bogor Regency, Indonesia",
+    resumeUrl: "/resume/Muhammad-Rizky-Destyanto-Resume.pdf",
   },
 };

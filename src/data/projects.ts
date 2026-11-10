@@ -3,212 +3,282 @@ import { ProjectItem } from "@/types/portfolio";
 
 export const projectsData: ProjectItem[] = [
   {
-    id: "proj-data-1",
-    slug: "enterprise-customer-retention-bi-analytics",
-    title: "[Placeholder Data 01] Customer Retention & Booking Demand Analytics",
+    id: "proj-data-student",
+    slug: "student-performance-analysis",
+    title: "Student Performance Analysis",
     category: "data-science",
     categoryLabel: "Data Analytics & Science",
     shortDescription:
-      "Eksplorasi data mendalam (EDA), pemodelan metrik pembatalan pesanan, dan pembuatan dashboard interaktif untuk optimasi retensi pelanggan.",
-    thumbnailPlaceholder: "DATA_BI_DASHBOARD_PREVIEW",
-    techStack: ["Python", "SQL", "Pandas", "NumPy", "Power BI", "Matplotlib"],
-    githubUrl: "https://github.com/username-placeholder/data-analytics-project",
-    liveDemoUrl: "https://example.com/dashboard-demo",
+      "Exploratory Data Analysis (EDA) dan analisis fitur menggunakan Python untuk mengidentifikasi faktor-faktor utama yang memengaruhi capaian akademik siswa.",
+    thumbnailPlaceholder: "STUDENT_PERFORMANCE_EDA_VISUALIZATION",
+    techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
+    githubUrl: "https://github.com/rzkydstyn/student-performance-analysis",
     featured: true,
-    date: "2026",
+    date: "2025 — 2026",
     overview:
-      "[Placeholder Overview] Proyek ini menganalisis lebih dari 100.000 baris data historis transaksi untuk menemukan pola utama penyebab pembatalan pesanan dan penurunan retensi pelanggan.",
+      "Proyek analisis data komprehensif yang bertujuan mengeksplorasi dan memetakan variabel akademik, demografis, dan kebiasaan belajar yang berkorelasi erat dengan performa nilai siswa.",
     background:
-      "Tingginya tingkat pembatalan transaksi berdampak langsung pada akurasi proyeksi pendapatan bulanan dan efisiensi alokasi kapasitas layanan.",
+      "Capaian akademik siswa dipengaruhi oleh berbagai faktor multidimensional. Tanpa analisis berbasis data, institusi pendidikan kesulitan menentukan intervensi belajar yang paling berdampak.",
     problemStatement:
-      "Tim operasional belum memiliki visibilitas terukur mengenai variabel apa saja (lead time, segmen pasar, atau tipe deposit) yang paling memicu pembatalan.",
+      "Faktor spesifik apa saja yang memiliki hubungan paling signifikan terhadap nilai akhir siswa, dan bagaimana pola distribusinya jika dilihat melalui visualisasi statistik?",
     objectives: [
-      "Membersihkan dan menormalisasi dataset mentah menggunakan Python (Pandas & NumPy).",
-      "Mengidentifikasi korelasi antar fitur melalui Exploratory Data Analysis (EDA) dan query SQL.",
-      "Merancang dashboard Power BI interaktif untuk memantau KPI secara berkala.",
+      "Melakukan data cleaning dan preprocessing untuk memastikan dataset bebas dari anomali dan missing values.",
+      "Melakukan Exploratory Data Analysis (EDA) dan analisis korelasi antar fitur menggunakan Pandas dan NumPy.",
+      "Membuat visualisasi informatif dengan Matplotlib dan Seaborn untuk mengomunikasikan pola hubungan variabel.",
+      "Merumuskan analytical insights berbasis bukti untuk rekomendasi peningkatan akademik.",
     ],
     methodologyGeneral:
-      "Menggunakan alur CRISP-DM mulai dari Data Understanding, Data Preparation (imputasi missing values & outlier handling), analisis statistik deskriptif, hingga penyusunan visualisasi dashboard.",
+      "Menggunakan alur kerja Data Science terstruktur: inspeksi struktur data, pembersihan dan transformasi fitur, analisis statistik univariat & multivariat, visualisasi distribusi, serta persiapan pemodelan dengan Scikit-learn.",
     implementationSummary:
-      "Pipeline pembersihan data ditulis dalam Jupyter Notebook, menghasilkan tabel bersih yang kemudian dihubungkan ke model data star-schema di Power BI.",
+      "Seluruh eksperimen diimplementasikan menggunakan Python di dalam lingkungan Jupyter Notebook, memanfaatkan Pandas untuk manipulasi dataframe serta Seaborn/Matplotlib untuk pemetaan grafik distribusi dan heatmap korelasi.",
     resultsSummary:
-      "Berhasil memetakan 3 faktor risiko utama pembatalan dan memberikan rekomendasi kebijakan deposit yang diproyeksikan menurunkan rasio pembatalan sebesar [X]%.",
+      "Berhasil mengidentifikasi variabel kunci yang mendorong peningkatan skor ujian siswa serta menyajikan visualisasi tren yang mudah diinterpretasikan oleh pemangku kepentingan.",
     challenges: [
-      "Menangani tingginya persentase nilai kosong (missing values) pada kolom agen perjalanan.",
-      "Menyamakan format tanggal dan anomali nilai ekstrem pada variabel lead time.",
+      "Menangani keberagaman tipe data kategorikal dan numerik agar siap dianalisis secara statistik.",
+      "Memilih jenis representasi visual yang paling tepat agar pola multivariat tidak menimbulkan bias interpretasi.",
     ],
     lessonsLearned: [
-      "Pentingnya validasi domain bisnis sebelum menghapus outlier agar tidak menghilangkan pola musiman yang valid.",
+      "Tahap Exploratory Data Analysis (EDA) dan pembersihan data yang teliti sangat menentukan kualitas insight sebelum melangkah ke tahap pemodelan Scikit-learn.",
     ],
     dataDetails: {
-      datasetInfo: "[Placeholder Dataset] 119,390 baris × 32 atribut transaksi historis (Format CSV & SQL Database).",
+      datasetInfo:
+        "Student Academic Performance Dataset — mencakup variabel demografis, persiapan ujian, kebiasaan belajar, serta skor evaluasi akademik.",
       preprocessingSteps: [
-        "Deduplikasi data dan penanganan missing values menggunakan median/mode imputation.",
-        "Feature Engineering: Membuat variabel rasio pembatalan historis dan kategori durasi menginap.",
-        "Agregasi kueri SQL menggunakan CTE dan Window Functions untuk analisis kohort bulanan.",
+        "Pemeriksaan tipe data, deduplikasi baris, dan penanganan nilai kosong (missing value handling).",
+        "Encoding variabel kategorikal dan normalisasi fitur numerik menggunakan Scikit-learn & Pandas.",
+        "Analisis matriks korelasi untuk menyaring fitur yang paling berpengaruh terhadap skor target.",
       ],
       metrics: [
-        { label: "Records Processed", value: "119.3K+", description: "Total baris data bersih yang dianalisis" },
-        { label: "Key Risk Factor", value: "Lead Time > 90d", description: "Korelasi tertinggi terhadap pembatalan" },
-        { label: "Data Completeness", value: "99.4%", description: "Skor integritas pasca-cleaning" },
+        { label: "Core Workflow", value: "EDA & Feature Analysis", description: "Eksplorasi pola & korelasi multivariat" },
+        { label: "Primary Stack", value: "Python + Seaborn", description: "Pemrosesan & visualisasi statistik" },
+        { label: "Data Integrity", value: "100% Cleaned", description: "Dataset tervalidasi tanpa missing values" },
       ],
       visualizations: [
         {
-          title: "Cancellation Rate by Lead Time & Market Segment",
-          caption: "Distribusi peningkatan risiko pembatalan seiring bertambahnya jarak waktu pemesanan.",
-          placeholderLabel: "CHART_01: Multi-Axis Bar & Line Visualization",
+          title: "Feature Correlation & Score Distribution",
+          caption: "Visualisasi hubungan antar faktor kebiasaan belajar dan distribusi skor menggunakan Seaborn & Matplotlib.",
+          placeholderLabel: "SEABORN_HEATMAP_AND_DISTRIBUTION_PLOT",
         },
         {
-          title: "Executive BI Dashboard Overview",
-          caption: "Tampilan interaktif Power BI untuk pemantauan ADR (Average Daily Rate) dan Occupancy.",
-          placeholderLabel: "CHART_02: Power BI Interactive Canvas",
+          title: "Categorical Impact Comparison",
+          caption: "Perbandingan rata-rata capaian nilai berdasarkan kategori persiapan dan latar belakang akademik.",
+          placeholderLabel: "MATPLOTLIB_MULTI_VARIABLE_BOXPLOT",
         },
       ],
       actionableInsights: [
-        "Pemesanan dengan lead time di atas 90 hari tanpa deposit memiliki rasio pembatalan 2.4x lebih tinggi dibanding segmen reguler.",
-        "Penerapan kebijakan pengingat otomatis pada H-14 sebelum jadwal kedatangan direkomendasikan untuk segmen Online Travel Agent.",
+        "Konsistensi persiapan ujian dan keterlibatan akademik menunjukkan korelasi positif paling kuat terhadap kenaikan nilai rata-rata.",
+        "Visualisasi distribusi membantu mendeteksi kelompok siswa yang membutuhkan pendampingan belajar lebih awal.",
       ],
     },
   },
   {
-    id: "proj-cyber-1",
-    slug: "web-infrastructure-vulnerability-assessment-remediation",
-    title: "[Placeholder Cyber 01] Web Application Vulnerability Assessment & Defensive Hardening",
-    category: "cybersecurity",
-    categoryLabel: "Cybersecurity",
+    id: "proj-data-nvidia",
+    slug: "nvidia-stock-price-analysis",
+    title: "NVIDIA Stock Price Analysis & Prediction",
+    category: "data-science",
+    categoryLabel: "Data Analytics & Science",
     shortDescription:
-      "Asesmen kerentanan sistem berizin, analisis log lalu lintas jaringan, serta implementasi patch mitigasi berbasis standar OWASP Top 10.",
-    thumbnailPlaceholder: "SECURITY_ASSESSMENT_REPORT",
-    techStack: ["Linux", "OWASP Top 10", "Wireshark", "Burp Suite", "Log Analysis", "Secure Coding"],
-    githubUrl: "https://github.com/username-placeholder/cybersecurity-defensive-lab",
+      "Analisis data historis saham NVIDIA, feature engineering deret waktu, dan pengembangan model regresi Machine Learning untuk memprediksi harga penutupan (closing price).",
+    thumbnailPlaceholder: "NVIDIA_STOCK_PREDICTION_PLOT",
+    techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "Scikit-learn"],
+    githubUrl: "https://github.com/rzkydstyn/NVIDIA-Stock-Price-Prediction",
     featured: true,
     date: "2026",
     overview:
-      "[Placeholder Overview] Studi kasus pengujian keamanan terotorisasi dan penguatan pertahanan (system hardening) pada lingkungan laboratorium aplikasi web internal.",
+      "Studi analitik dan pemodelan Machine Learning pada data pergerakan harga saham historis NVIDIA untuk mengidentifikasi tren pasar serta memprediksi harga penutupan (closing price).",
     background:
-      "Aplikasi web yang dibangun tanpa validasi input dan konfigurasi akses yang ketat rentan terhadap eksploitasi injeksi basis data dan pengambilalihan sesi.",
+      "Pergerakan saham sektor teknologi dan semikonduktor seperti NVIDIA memiliki volatilitas dan tren pertumbuhan yang dinamis, sehingga membutuhkan pendekatan kuantitatif berbasis data historis.",
     problemStatement:
-      "Bagaimana mengidentifikasi titik lemah arsitektur melalui analisis trafik dan log server, lalu menutup celah tersebut pada level kode dan konfigurasi jaringan?",
+      "Bagaimana mengekstrak pola dari data historis harga (Open, High, Low, Volume) melalui feature engineering dan membangun model regresi yang akurat untuk memprediksi harga penutupan?",
     objectives: [
-      "Melakukan Vulnerability Assessment menyeluruh pada lingkungan lab berizin sesuai standar OWASP.",
-      "Menganalisis anomali paket jaringan dan log autentikasi menggunakan Wireshark dan Linux CLI.",
-      "Menyusun dokumentasi Remediation Patch untuk memperbaiki kerentanan SQL Injection dan Broken Access Control.",
+      "Menganalisis tren historis dan pola volatilitas harga saham NVIDIA menggunakan Pandas dan Matplotlib.",
+      "Melakukan data cleaning, exploratory data analysis (EDA), dan feature engineering pada data deret waktu.",
+      "Membangun dan melatih model Machine Learning berbasis Scikit-learn untuk memprediksi harga penutupan.",
+      "Mengevaluasi performa model menggunakan metrik evaluasi regresi standar.",
     ],
     methodologyGeneral:
-      "Mengikuti tahapan NIST / OWASP Testing Guide: Reconnaissance & Asset Mapping, Vulnerability Scanning, Log & Packet Inspection, Risk Scoring, dan Code Remediation.",
+      "Meliputi pengumpulan data historis OHLCV (Open, High, Low, Close, Volume), pembersihan dan pengurutan kronologis, pembuatan fitur teknikal, pembagian data latih/uji, pelatihan model regresi Scikit-learn, dan evaluasi error.",
     implementationSummary:
-      "Pengujian dilakukan di dalam jaringan terisolasi (sandbox lab). Setiap temuan dianalisis penyebab utamanya (root cause) pada kode sumber dan diperbaiki menggunakan parameterized queries serta aturan firewall.",
+      "Menggunakan NumPy dan Pandas untuk kalkulasi indikator pergerakan harga, Scikit-learn untuk pipeline pemodelan regresi, serta Matplotlib untuk membandingkan grafik harga aktual vs prediksi.",
     resultsSummary:
-      "Mengidentifikasi dan memitigasi [X] temuan kerentanan kritis dan tinggi, serta menyusun aturan deteksi log untuk mencegah serangan brute-force berulang.",
+      "Model mampu menangkap arah tren pergerakan harga penutupan saham NVIDIA dengan tingkat kesalahan prediksi yang terukur pada metrik regresi.",
     challenges: [
-      "Membedakan trafik anomali otomatis dari aktivitas pengguna normal di dalam file log berukuran besar.",
-      "Memastikan patch keamanan tidak merusak fungsionalitas kueri pencarian dinamis yang sudah ada.",
+      "Menjaga urutan kronologis saat membagi data training dan testing agar tidak terjadi data leakage pada data time-series.",
+      "Menghadapi lonjakan harga ekstrem akibat sentimen pasar AI global pada periode terbaru.",
     ],
     lessonsLearned: [
-      "Keamanan yang efektif membutuhkan pendekatan berlapis (Defense in Depth): memperbaiki kode aplikasi sekaligus memperketat konfigurasi server.",
+      "Kualitas feature engineering pada data historis dan pemilihan metrik evaluasi regresi yang tepat sangat krusial dalam pemodelan finansial.",
     ],
-    cyberDetails: {
-      authorizationScope:
-        "AUTHORIZED LAB ENVIRONMENT ONLY: Seluruh pengujian, analisis paket, dan simulasi kerentanan dalam dokumentasi ini dilakukan secara eksklusif pada infrastruktur laboratorium lokal/akademik yang memiliki izin resmi untuk tujuan edukasi dan pertahanan sistem.",
-      threatModelOrScope:
-        "Target Scope: Modul Autentikasi Pengguna, Endpoint Pencarian Database, dan Layanan Upload Dokumen pada Web Server berbasis Linux.",
-      methodology: [
-        "Threat Modeling & Attack Surface Mapping",
-        "HTTP/HTTPS Traffic Inspection via Burp Suite & Wireshark",
-        "Server Access & Error Log Analysis (Linux grep/awk)",
-        "Source Code Review & Secure Patch Verification",
+    dataDetails: {
+      datasetInfo:
+        "NVIDIA Historical Stock Market Dataset — mencakup atribut Date, Open, High, Low, Close, Adjusted Close, dan Trading Volume.",
+      preprocessingSteps: [
+        "Konversi indeks datetime, pengurutan kronologis, dan validasi kelengkapan nilai transaksi harian.",
+        "Feature Engineering: ekstraksi fitur pergerakan harga, selisih harian, dan tren rata-rata bergerak.",
+        "Pembagian dataset latih dan uji serta penskalaan fitur numerik untuk stabilitas model regresi.",
       ],
-      findings: [
+      metrics: [
+        { label: "Model Task", value: "Closing Price Regression", description: "Prediksi nilai kontinu harga penutupan" },
+        { label: "ML Framework", value: "Scikit-learn", description: "Implementasi & evaluasi metrik regresi" },
+        { label: "Feature Scope", value: "Historical OHLCV", description: "Analisis tren & volatilitas pasar" },
+      ],
+      visualizations: [
         {
-          title: "Improper Input Neutralization Leading to SQL Injection",
-          severity: "Critical",
-          analysis:
-            "Parameter pencarian menggabungkan string input pengguna secara langsung ke dalam interpreter SQL tanpa sanitasi, memungkinkan manipulasi logika kueri.",
-          remediation:
-            "Mengganti penggabungan string (string concatenation) dengan Prepared Statements / Parameterized Queries dan menerapkan strict allow-list validation.",
-          codePatch: {
-            vulnerable: `// VULNERABLE CODE (Direct String Concatenation)\nconst query = "SELECT * FROM users WHERE username = '" + req.body.user + "'";\ndb.execute(query);`,
-            secure: `// REMEDIATED CODE (Parameterized Query)\nconst query = "SELECT id, username, role FROM users WHERE username = ?";\ndb.execute(query, [req.body.user]);`,
-          },
+          title: "Historical Price Trend & Volume Analysis",
+          caption: "Grafik pertumbuhan harga saham NVIDIA dari waktu ke waktu beserta dinamika volume perdagangan.",
+          placeholderLabel: "TIME_SERIES_TREND_VISUALIZATION",
         },
         {
-          title: "Missing Rate Limiting on Authentication Endpoint",
-          severity: "High",
-          analysis:
-            "Analisis log server menunjukkan ribuan permintaan POST beruntun dari satu alamat IP ke endpoint login tanpa mekanisme pembatasan (throttling).",
-          remediation:
-            "Mengimplementasikan middleware Rate Limiting berbasis IP/Session, kebijakan account lockout sementara, dan pemantauan log otomatis.",
+          title: "Actual vs Predicted Closing Price",
+          caption: "Kurva perbandingan nilai penutupan aktual dengan hasil prediksi model regresi Scikit-learn.",
+          placeholderLabel: "REGRESSION_ACTUAL_VS_PREDICTED_CHART",
         },
+      ],
+      actionableInsights: [
+        "Kombinasi fitur harga pembukaan dan rentang harian (High-Low) memberikan kontribusi kuat dalam mengestimasi harga penutupan harian.",
+        "Evaluasi residual membantu mengidentifikasi periode volatilitas tinggi di mana model membutuhkan kalibrasi fitur tambahan.",
       ],
     },
   },
   {
-    id: "proj-web-1",
-    slug: "modular-academic-portal-management-system",
-    title: "[Placeholder Web 01] Full-Stack Academic & Resource Management Portal",
+    id: "proj-web-portfolio",
+    slug: "multidisciplinary-engineering-web-portfolio",
+    title: "Multidisciplinary Informatics Engineering Portfolio & Web System",
     category: "web-dev",
     categoryLabel: "Web & Software Dev",
     shortDescription:
-      "Aplikasi web full-stack modern dengan arsitektur modular, manajemen basis data relasional, filter pencarian dinamis, dan kontrol akses berbasis peran.",
-    thumbnailPlaceholder: "WEB_APP_INTERFACE_PREVIEW",
-    techStack: ["Next.js", "TypeScript", "React", "Tailwind CSS", "PostgreSQL", "Prisma ORM"],
-    githubUrl: "https://github.com/username-placeholder/fullstack-web-portal",
-    liveDemoUrl: "https://example.com/web-portal-demo",
+      "Pengembangan aplikasi web modern berbasis Next.js, TypeScript, dan Tailwind CSS dengan arsitektur data modular serta integrasi manajemen database.",
+    thumbnailPlaceholder: "MODERN_WEB_ARCHITECTURE_PREVIEW",
+    techStack: ["Next.js", "TypeScript", "HTML5 & CSS3", "JavaScript", "Tailwind CSS", "PostgreSQL / MySQL"],
+    githubUrl: "https://github.com/rzkydstyn/My-Websites",
+    liveDemoUrl: "https://website-portfolio-firstcommit.vercel.app",
     featured: true,
     date: "2026",
     overview:
-      "[Placeholder Overview] Platform web terintegrasi untuk mengelola data akademik, penjadwalan, dan pelaporan secara real-time dengan antarmuka responsif.",
+      "Platform web portofolio rekayasa perangkat lunak yang dirancang dengan arsitektur modular untuk mendokumentasikan studi kasus Data Science, Cybersecurity, dan Web Development secara terstruktur.",
     background:
-      "Pengelolaan data menggunakan spreadsheet terpisah sering menimbulkan duplikasi data, keterlambatan pencarian informasi, dan kurangnya histori audit.",
+      "Mahasiswa Teknik Informatika dengan keahlian lintas disiplin membutuhkan platform web yang tidak hanya estetis, tetapi juga membuktikan kemampuan rekayasa front-end, struktur data, dan manajemen kode Git.",
     problemStatement:
-      "Dibutuhkan aplikasi berbasis web yang cepat, memiliki skema database terstruktur, dan mudah digunakan baik di perangkat desktop maupun mobile.",
+      "Bagaimana merancang arsitektur web yang cepat, responsif, mendukung mode gelap/terang, dan memisahkan lapisan data dari antarmuka pengguna agar mudah dikembangkan?",
     objectives: [
-      "Membangun antarmuka pengguna yang bersih dan responsif menggunakan Next.js, TypeScript, dan Tailwind CSS.",
-      "Merancang skema database relasional yang ternormalisasi di PostgreSQL dengan Prisma ORM.",
-      "Menyediakan RESTful API / Server Actions dengan validasi skema input yang ketat.",
+      "Menerapkan arsitektur komponen reusable menggunakan React, Next.js App Router, dan TypeScript.",
+      "Merancang desain antarmuka minimalis modern dengan Tailwind CSS dan Figma.",
+      "Mengintegrasikan manajemen kontrol versi GitHub dan deployment otomatis di Vercel.",
     ],
     methodologyGeneral:
-      "Pengembangan dilakukan secara iteratif meliputi perancangan ERD, pembuatan wireframe UI/UX, implementasi API & autentikasi, hingga pengujian responsivitas.",
+      "Mengikuti tahapan Software Development Life Cycle (SDLC): perencanaan strategi konten, perancangan information architecture, pembuatan sistem desain UI/UX, hingga implementasi kode dan deployment.",
     implementationSummary:
-      "Menggunakan arsitektur Next.js App Router dengan pemisahan Server Components untuk pengambilan data cepat dan Client Components untuk tabel interaktif.",
+      "Menggunakan Dynamic Routing Next.js (`[slug]`) dengan Static Site Generation (SSG) dan skema TypeScript ketat untuk merender studi kasus lintas bidang secara otomatis.",
     resultsSummary:
-      "Menghasilkan sistem manajemen data terpusat dengan waktu muat halaman di bawah 1 detik dan kemudahan pencarian multi-filter secara instan.",
+      "Menghasilkan aplikasi web berkinerja tinggi yang terhubung langsung dengan workflow GitHub dan siap digunakan untuk kebutuhan profesional maupun akademik.",
     challenges: [
-      "Mengoptimalkan performa query pencarian dan pagination ketika jumlah baris data terus bertambah.",
-      "Menjaga konsistensi state UI antara komponen filter, URL search params, dan tabel data.",
+      "Menyatukan tiga bidang teknis yang berbeda ke dalam satu hierarki visual yang tetap bersih dan konsisten.",
+      "Memastikan struktur tipe data TypeScript fleksibel untuk menampung metrik data, laporan keamanan, dan diagram sistem.",
     ],
     lessonsLearned: [
-      "Menyimpan state filter di dalam URL Search Params jauh lebih baik untuk UX dan kemampuan berbagi tautan (shareable links) dibanding state lokal semata.",
+      "Pemisahan Single Source of Truth pada lapisan data membuat proses pembaruan konten portofolio menjadi jauh lebih cepat dan bebas bug.",
     ],
     webDetails: {
       keyFeatures: [
         {
-          title: "Role-Based Dashboard & Access Control",
-          description: "Tampilan dan hak akses operasi CRUD yang menyesuaikan peran pengguna (Admin, Staff, Viewer).",
+          title: "Dynamic Case Study Engine",
+          description: "Merender komponen visual berbeda secara otomatis untuk proyek Data Science, Cybersecurity, dan Web Dev.",
         },
         {
-          title: "Server-Side Filtering & Pagination",
-          description: "Pencarian multi-kriteria instan yang disinkronkan dengan parameter URL dan indeks database.",
+          title: "Interactive Domain Filtering",
+          description: "Filter instan berdasarkan kategori keahlian dan pencarian kata kunci teknologi.",
         },
         {
-          title: "Automated Data Validation",
-          description: "Validasi tipe data dua arah di sisi klien (form) dan server sebelum disimpan ke PostgreSQL.",
+          title: "Responsive Dark/Light Theme",
+          description: "Sistem tema adaptif dengan kontras tipografi yang nyaman di perangkat desktop maupun mobile.",
         },
       ],
       systemArchitecture: {
         description:
-          "Arsitektur tiga lapis modern: Next.js React Client/Server Layer -> API & Validation Middleware -> Prisma ORM -> PostgreSQL Database.",
-        diagramPlaceholder: "SYSTEM_ARCHITECTURE_DIAGRAM: Client <-> Next.js App Router <-> Prisma <-> PostgreSQL",
+          "Next.js App Router Architecture: TypeScript Data Layer -> Server/Client Modular Components -> Static Generation -> Vercel Edge Network.",
+        diagramPlaceholder: "NEXTJS_APP_ROUTER_MODULAR_ARCHITECTURE",
       },
       databaseDesign: {
-        ormOrDb: "PostgreSQL + Prisma ORM",
+        ormOrDb: "TypeScript Structured Schema / SQL Ready (PostgreSQL & MySQL)",
         schemaDescription:
-          "Skema relasional yang terdiri dari tabel Users, Profiles, Categories, Records, dan AuditLogs dengan indeks komposit pada kolom pencarian utama.",
-        erdPlaceholder: "ERD_SCHEMA_DIAGRAM: Users (1:N) Records (N:1) Categories",
+          "Struktur entitas terpisah untuk Profile, Categorized Skills, Polymorphic Project Details, Experience, dan Research.",
+        erdPlaceholder: "PORTFOLIO_ENTITY_SCHEMA_DIAGRAM",
       },
       uiUxHighlights: [
-        "Desain tabel data dengan sticky header dan indikator status berwarna semantik.",
-        "Dukungan penuh Dark Mode dan navigasi keyboard (accessibility-friendly).",
+        "Swiss-Grid Minimalist layout dengan aksen warna semantik per domain keahlian.",
+        "Navigasi intuitif yang dirancang khusus untuk memudahkan pemindaian oleh Technical Recruiter.",
+      ],
+    },
+  },
+  {
+    id: "proj-cyber-lab",
+    slug: "web-application-security-assessment-lab",
+    title: "Web Application Security & Vulnerability Analysis Lab",
+    category: "cybersecurity",
+    categoryLabel: "Cybersecurity",
+    shortDescription:
+      "Eksplorasi dan analisis kerentanan keamanan aplikasi web pada lingkungan laboratorium berizin, meliputi pengujian autentikasi, injeksi SQL, dan rekomendasi mitigasi kode.",
+    thumbnailPlaceholder: "WEB_SECURITY_LAB_ASSESSMENT",
+    techStack: ["Cyber Security", "Web Security", "SQL", "Python", "Linux", "OWASP Top 10"],
+    githubUrl: "https://github.com/rzkydstyn",
+    featured: true,
+    date: "2026",
+    overview:
+      "Dokumentasi pembelajaran dan pengujian laboratorium keamanan siber yang berfokus pada identifikasi celah keamanan aplikasi web serta penerapan langkah-langkah perbaikan (remediation) di sisi kode dan database.",
+    background:
+      "Pemahaman mendalam mengenai bagaimana celah keamanan muncul pada proses autentikasi dan kueri basis data sangat penting bagi seorang engineer untuk membangun perangkat lunak yang tangguh.",
+    problemStatement:
+      "Bagaimana mengenali pola serangan umum pada aplikasi web (seperti manipulasi kueri SQL dan kelemahan validasi input) serta mengamankan arsitektur aplikasi dari risiko tersebut?",
+    objectives: [
+      "Menganalisis mekanisme kerentanan web berdasarkan prinsip keamanan siber dan standar OWASP.",
+      "Menguji skenario keamanan pada lingkungan laboratorium akademik yang terisolasi dan berizin.",
+      "Merumuskan solusi secure coding dan validasi database untuk menutup celah yang ditemukan.",
+    ],
+    methodologyGeneral:
+      "Melakukan analisis permukaan aplikasi (attack surface) di lingkungan lab, mengidentifikasi titik input yang tidak tervalidasi, mendokumentasikan akar masalah, dan menyusun patch perbaikan kode.",
+    implementationSummary:
+      "Mengombinasikan pemahaman pemrograman Python, manajemen database SQL (MySQL/PostgreSQL), dan arsitektur web untuk mengevaluasi keamanan endpoint aplikasi secara menyeluruh.",
+    resultsSummary:
+      "Menghasilkan dokumentasi teknis mengenai pencegahan serangan injeksi basis data, penguatan kontrol autentikasi, dan pembatasan upload file berbahaya.",
+    challenges: [
+      "Menganalisis respons server untuk membedakan perilaku kesalahan normal dengan indikasi celah keamanan.",
+      "Menyusun validasi input yang ketat tanpa menghambat pengalaman pengguna yang sah.",
+    ],
+    lessonsLearned: [
+      "Aspek keamanan harus diintegrasikan sejak tahap perancangan database dan penulisan kode awal (Security by Design).",
+    ],
+    cyberDetails: {
+      authorizationScope:
+        "AUTHORIZED ACADEMIC LAB ONLY: Seluruh kegiatan analisis dan pengujian dalam proyek ini dilakukan secara eksklusif di dalam lingkungan laboratorium pembelajaran terisolasi untuk tujuan edukasi Teknik Informatika dan penguatan pertahanan sistem.",
+      threatModelOrScope:
+        "Fokus evaluasi meliputi modul autentikasi login, parameter pencarian database SQL, dan mekanisme validasi input formulir web.",
+      methodology: [
+        "Input Validation & SQL Query Inspection",
+        "Authentication Flow & Session Security Analysis",
+        "File Upload Restriction & MIME-Type Verification",
+        "Secure Coding Remediation & Patching",
+      ],
+      findings: [
+        {
+          title: "Unvalidated SQL Query Input (SQL Injection Risk)",
+          severity: "Critical",
+          analysis:
+            "Penggabungan input pengguna secara langsung ke dalam string kueri SQL memungkinkan penyerang memanipulasi kondisi logika pembacaan data.",
+          remediation:
+            "Terapkan Prepared Statements / Parameterized Queries pada seluruh interaksi database PostgreSQL/MySQL serta validasi tipe data di sisi server.",
+          codePatch: {
+            vulnerable: `// Vulnerable Query Construction\nSELECT * FROM users WHERE username = '$user_input' AND password = '$password_input';`,
+            secure: `// Secure Parameterized Query\nPREPARE stmt FROM 'SELECT id, username FROM users WHERE username = ? AND password_hash = ?';\nEXECUTE stmt USING @user_input, @password_hash;`,
+          },
+        },
+        {
+          title: "Weak Authentication Rate Control",
+          severity: "High",
+          analysis:
+            "Endpoint autentikasi yang tidak memiliki pembatasan percobaan login berisiko terhadap pengujian kredensial otomatis (brute-force).",
+          remediation:
+            "Implementasikan pembatasan jumlah request (rate limiting), penundaan progresif, dan pencatatan log aktivitas mencurigakan.",
+        },
       ],
     },
   },
